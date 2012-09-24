@@ -55,7 +55,7 @@ If `www-form` is true, assumes that `string` is an
 application/x-www-form-urlencoded string.
 
 `encoding` is a character encoding scheme. `string` is decoded according to the
-scheme after percent-encoding. This argument is passed to
+encoding after percent-decoding. This argument is passed to
 `babel:octets-to-string` without any change.
 
 ### Predicates
