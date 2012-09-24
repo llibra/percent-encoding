@@ -3,7 +3,7 @@
 (defun decode (string &key (test (load-time-value (constantly t)))
                            (www-form nil)
                            (encoding *default-character-encoding*))
-  (declare (optimize speed (debug 0) (safety 0))
+  (declare #.*optimize-qualities*
            (type simple-string string)
            (type (function (octet) boolean) test))
   (labels ((->octet (c1 c2 pos)
