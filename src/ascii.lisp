@@ -12,7 +12,7 @@
 
 (declaim (inline ascii-char))
 (defun ascii-char (x)
-  (aref (the (simple-array (or character null) (*)) *ascii-char-table*) x))
+  (aref (the (simple-array (or character null)) *ascii-char-table*) x))
 
 (defvar *char-ascii-table*
   (labels ((->code (x)
@@ -33,4 +33,4 @@
 
 (declaim (inline char-ascii))
 (defun char-ascii (x)
-  (aref *char-ascii-table* (char-code x)))
+  (aref (the (simple-array (or octet null)) *char-ascii-table*) (char-code x)))
