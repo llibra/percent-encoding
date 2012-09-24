@@ -10,6 +10,7 @@
                         :serial t
                         :components ((:file "package")
                                      (:file "type")
+                                     (:file "var")
                                      (:file "util")
                                      (:file "condition")
                                      (:file "ascii")

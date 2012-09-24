@@ -2,7 +2,7 @@
 
 (defun decode (string &key (test (load-time-value (constantly t)))
                            (www-form nil)
-                           (encoding :utf-8))
+                           (encoding *default-character-encoding*))
   (declare (optimize speed (debug 0) (safety 0))
            (type simple-string string)
            (type (function (octet) boolean) test))

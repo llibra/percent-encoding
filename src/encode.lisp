@@ -2,7 +2,7 @@
 
 (defun encode (string &key (test #'unreservedp)
                            (www-form nil)
-                           (encoding :utf-8))
+                           (encoding *default-character-encoding*))
   (declare (optimize speed (debug 0) (safety 0))
            (type (function (octet) boolean) test))
   (do* ((octets (string-to-octets string :encoding encoding))
