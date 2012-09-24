@@ -5,7 +5,7 @@
                            (encoding :utf-8))
   (declare (optimize speed (debug 0) (safety 0))
            (type simple-string string)
-           (type (function (octet) (or (eql t) null)) test))
+           (type (function (octet) boolean) test))
   (labels ((->octet (c1 c2 pos)
              (aif (char-pair-octet c1 c2)
                   it
