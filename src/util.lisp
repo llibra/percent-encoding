@@ -6,7 +6,7 @@
   #+ccl
   (ccl::shrink-vector vector size)
   #-(or sbcl ccl)
-  (subseq vector size))
+  (subseq vector 0 size))
 
 (declaim (inline char-pair-octet))
 (defun char-pair-octet (c1 c2)
